@@ -9,19 +9,24 @@ namespace AspNetCoreIntro2024.Controllers
 
         public IActionResult Index()
         {
-            string listToPrint = "Elenco Utenti:";
-            foreach (var item in users)
-            {
-                listToPrint += $"\n{item}";
-            }
+            //string listToPrint = "Elenco Utenti:";
+            //foreach (var item in users)
+            //{
+            //    listToPrint += $"\n{item}";
+            //}
 
-            return Content(listToPrint);
+            //return Content(listToPrint);
+            return View(users);
         }
 
         public IActionResult Detail(int id)
         {
-            string message = $"Sono Detail e ho ricevuto id: {id}";
-            message += $"\nL'utente richiesto è {users[id]}";
+            string message = message = $"Sono Detail e ho ricevuto id: {id}";
+            if (id > 0 && id < users.Count)
+                message += $"\nL'utente richiesto è {users[id]}";
+            else
+                message += "\nUtente non trovato";
+
             return Content(message);
         }
     }
