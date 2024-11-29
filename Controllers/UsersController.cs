@@ -1,21 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCoreIntro2024.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreIntro2024.Controllers
 {
     public class UsersController : Controller
     {
-        private List<string> users = new List<string>
-        { "Paperino", "Pippo", "Topolino", "Minnie"};
+        private List<UserModel> users = new List<UserModel>
+        {
+            new UserModel(1, "Paolino", "Paperino", new DateTime(1934,7,5), "San Francisco"),
+            new UserModel(2, "Giuseppe", "Garibaldi", new DateTime(1799,10,15), "Nizza"),
+            new UserModel(3, "Camillo", "Cavour", new DateTime(1805,1,11), "Torino"),
+            new UserModel(4, "Monica", "Bellucci", new DateTime(1968,9,20), "Bologna")
+        };
 
         public IActionResult Index()
         {
-            //string listToPrint = "Elenco Utenti:";
-            //foreach (var item in users)
-            //{
-            //    listToPrint += $"\n{item}";
-            //}
-
-            //return Content(listToPrint);
             return View(users);
         }
 

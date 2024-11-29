@@ -7,9 +7,9 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            @*<th>Cognome</th>
+                            <th>Cognome</th>
                             <th>Data Nascita</th>
-                            <th>Luogo Nascita</th>*@
+                            <th>Luogo Nascita</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -17,10 +17,10 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item</td>
-                                @*<td>qui il cognome</td>
-                                <td>qui la data</td>
-                                <td>qui il luogo</td>*@
+                                <td>@item.Name</td>
+                                <td>@item.Surname</td>
+                                <td>@item.DateOfBirth</td>
+                                <td>@item.PlaceOfBirth</td>
                                 <td>
                                     <a>
                                         <button type="button" class="btn btn-primary">Details</button>
