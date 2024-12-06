@@ -1,0 +1,12 @@
+﻿<html>
+    <head>
+        @* <title>5B ASP.NET Core</title> *@
+        <title>@ViewData["TitoloPagina"]</title>
+    </head>
+    <body>
+        <header>Qui ci sarà l'header</header>
+        @RenderBody()
+        <footer>Qui ci sarà il footer</footer>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
