@@ -1,0 +1,25 @@
+﻿@using AspNetCoreIntro2024.Models
+
+@model UserModel
+@{
+    ViewData["TitoloPagina"] = "Dettaglio Utente";
+}
+
+<div>
+    <h3 class="text-center">Dettagli dell'utente selezionato</h3>
+</div>
+<div class="card mt-4 mx-auto" style="width:fit-content;">
+    <div class="card-content p-3">
+        @if (Model != null)
+        {
+            <p><span class="fw-bold">Nome: </span>@Model.Name</p>
+            <p><span class="fw-bold">Cognome: </span>@Model.Surname</p>
+            <p><span class="fw-bold">Data di nascita: </span>@Model.DateOfBirth.ToShortDateString()</p>
+            <p><span class="fw-bold">Luogo di nascita: </span>@Model.PlaceOfBirth</p>
+        }
+        else
+        {
+            <p class="mb-0 fw-bold">Utente non trovato</p>
+        }
+    </div>
+</div>

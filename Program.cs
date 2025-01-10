@@ -1,4 +1,9 @@
+using AspNetCoreIntro2024.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSingleton<IUsersService, UsersService>();
+
 //builder.Services.AddMvc();
 builder.Services.AddControllersWithViews();
 
