@@ -21,5 +21,10 @@ namespace AspNetCoreIntro2024.Services
         {
             return users.SingleOrDefault(u => u.Id == id);
         }
+
+        public int DeleteUserById(int id)
+        {
+            return users.RemoveAll(u => u.Id == id);
+        }
     }
 }

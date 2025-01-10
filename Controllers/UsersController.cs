@@ -29,5 +29,12 @@ namespace AspNetCoreIntro2024.Controllers
             //return Content(message);
             return View(_usersService.GetUserById(id));
         }
+
+        public IActionResult DeleteUser(int id)
+        {
+            int deleted = _usersService.DeleteUserById(id);
+            // return Content($"Utente eliminato: {deleted}");
+            return RedirectToAction("Index");
+        }
     }
 }
