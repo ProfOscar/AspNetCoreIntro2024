@@ -14,3 +14,8 @@
 * Aggiunto le view di layout e utilizzato l'array associativo ViewData per la gestione del titolo delle pagine
 * Integrato TagHelpers e Bootstrap (con CDN)
 
+### Quarta Lezione:
+* Aggiunta interfaccia IUsersService e implementazione UsersService
+* Implementato dependency injection per IUsersService come Singleton in Program.cs
+* Aggiunto view per dettagli utente
+* Implementato cancellazione utente
