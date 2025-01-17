@@ -1,0 +1,17 @@
+﻿body {
+    background-color: lightyellow;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.logo {
+    height: 30px;
+    margin: 10px;
+}

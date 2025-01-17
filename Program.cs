@@ -9,6 +9,9 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// per utilizzare css, js, ecc... contenuti nella cartella wwwroot
+app.UseStaticFiles();
+
 // app.MapGet("/", () => "Hello World!");
 app.MapControllerRoute(
     name: "default",
