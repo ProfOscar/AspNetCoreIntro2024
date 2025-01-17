@@ -19,3 +19,8 @@
 * Implementato dependency injection per IUsersService come Singleton in Program.cs
 * Aggiunto view per dettagli utente
 * Implementato cancellazione utente
+
+### Quinta Lezione:
+* Implementato aggiunta utente
+* Aggiunto cartella speciale wwwroot per css e logo
+* Introduzione alle WebApi
