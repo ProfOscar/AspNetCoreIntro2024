@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["TitoloPagina"] = "New user";
+}
+
+<div>
+    <h3 class="text-center">Aggiungiamo un nuovo utente</h3>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <form class="form-group" method="post" asp-action="AddUser">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Nome</label>
+                <input type="text" id="nameInput" class="form-control" name="Name">
+            </div>
+            <div class="mb-3">
+                <label for="surnameInput" class="form-label">Cognome</label>
+                <input type="text" id="surnameInput" class="form-control" name="Surname">
+            </div>
+            <div class="mb-3">
+                <label for="dateOfBirthInput" class="form-label">Data di nascita</label>
+                <input type="date" id="dateOfBirthInput" class="form-control" name="DateOfBirth">
+            </div>
+            <div class="mb-3">
+                <label for="placeOfBirthInput" class="form-label">Luogo di nascita</label>
+                <input type="text" id="placeOfBirthInput" class="form-control" name="PlaceOfBirth">
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Aggiungi</button>
+            </div>
+        </form>
+    </div>
+</div>

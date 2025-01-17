@@ -6,6 +6,7 @@ namespace AspNetCoreIntro2024.Services
     {
         IEnumerable<UserModel> GetUsers();
         UserModel? GetUserById(int id);
+        UserModel AddUser(UserModel user);
         int DeleteUserById(int id);
     }
 }

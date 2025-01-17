@@ -22,6 +22,13 @@ namespace AspNetCoreIntro2024.Services
             return users.SingleOrDefault(u => u.Id == id);
         }
 
+        public UserModel AddUser(UserModel user)
+        {
+            user.Id = users.Max(u => u.Id) + 1;
+            users.Add(user);
+            return user;
+        }
+
         public int DeleteUserById(int id)
         {
             return users.RemoveAll(u => u.Id == id);
